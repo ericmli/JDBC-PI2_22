@@ -4,9 +4,12 @@ import connection.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import model.bean.Categoria;
+
+/**
+ * CRUD
+ * @author erics
+ */
 
 public class CategoriaDAO {
     

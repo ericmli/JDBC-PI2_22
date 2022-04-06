@@ -9,10 +9,10 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
     
-    private static final String DRIVER = "java.sql.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/loja";
+    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/whime?useTimezone=true&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "1334";
+    private static final String PASS = "****";
     
     public static Connection getConnection(){
         try {
@@ -24,7 +24,7 @@ public class ConnectionFactory {
         
         catch (ClassNotFoundException | SQLException ex) {
             
-            throw new RuntimeException("Erro na conexão", ex);
+            throw new RuntimeException("Driver não encontrado", ex);
         }
     }
     
